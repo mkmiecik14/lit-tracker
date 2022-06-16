@@ -1,63 +1,51 @@
-baseURL: https://mkmiecik14.github.io/lit-tracker/
-languageCode: en-us
-title: Personal Digital Garden
-theme: digital-garden-hugo-theme
-googleAnalytics: UA-PROPERTY_ID
-Params:
-  description: My Digital Garden on the Internet
-  images: /digital-garden-logo.png
-  newsletter:
-    description: A curated weekly digest once a week to your mailbox
-    path: https://www.getrevue.co/profile/username/add_subscriber
-    title: ''
+theme: hugo-theme-singular
+baseURL: https://gohugo.io/
+title: Singular
+copyright: Copyright License [GNU General Public License v2 or later](http://www.gnu.org/licenses/gpl-2.0.html)
+languageCode: en
+DefaultContentLanguage: en
+paginate: 3
+enableInlineShortcodes: yes
+pygmentsCodefences: yes
+ignoreErrors: error-remote-getjson
+params:
+  description: Simple and clean theme for hugo
+  logo:
+    url: /images/icon.jpg
+markup:
+  highlight:
+    codeFences: yes
+    noClasses: yes
+    style: github
+permalinks:
+  page: /:filename/
+  post: /:year/:month/:day/:filename/
 menu:
   main:
-    - name: Home
-      url: /
-      weight: 1
-    - name: Articles
-      url: /articles
-      weight: 2
-    - name: Portfolio
-      url: /portfolio
-      weight: 3
-    - name: Stack
-      url: /stack
-      weight: 4
-    - name: Polywork
-      url: https://polywork.com
-      weight: 5
-  social:
-    - name: Twitter
-      url: https://twitter.com
-      weight: 1
-    - name: GitHub
-      url: https://github.com
-      weight: 2
-    - name: LinkedIn
-      url: https://linkedin.com
-      weight: 3
-    - name: Instagram
-      url: https://instagram.com
-      weight: 4
-    - name: Dribbble
-      url: https://dribbble.com
-      weight: 5
-    - name: Codepen
-      url: https://codepen.io
-      weight: 6
-    - name: Twitch
-      url: https://twitch.com
-      weight: 7
-    - name: Email
-      url: mailto:user@example.org
-      weight: 8
-    - name: RSS
-      url: /articles/index.xml
-      weight: 9
-markup:
-  goldmark:
-    renderer:
-      unsafe: yes
-  highlight:
-    style: dracula
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+taxonomies:
+  category: categories
+  series: series
+  tag: tags
+privacy:
+  instagram:
+    disabled: no
+    simple: yes
+  twitter:
+    disabled: no
+    enableDNT: yes
+    simple: yes
+  vimeo:
+    disabled: no
+    simple: yes
+  youtube:
+    disabled: no
+    privacyEnhanced: yes
+services:
+  instagram:
+    disableInlineCSS: yes
+  twitter:
+    disableInlineCSS: yes
