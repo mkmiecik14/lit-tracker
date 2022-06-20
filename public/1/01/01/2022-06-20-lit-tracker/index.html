@@ -2,8 +2,8 @@
 <html><head>
     <meta charset="utf-8">
     <base href="https://mkmiecik14.github.io/lit-tracker">
-    <title> Emoji Support </title>
-    <link rel="canonical" href="https://mkmiecik14.github.io/lit-tracker/2019/03/05/emoji-support/">
+    <title> Lit Tracker </title>
+    <link rel="canonical" href="https://mkmiecik14.github.io/lit-tracker/1/01/01/2022-06-20-lit-tracker/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,42 +46,57 @@
 <div class="site-main content">
 <article>
   <header class="entry-header">
-    <h1 class="entry-title">Emoji Support</h1>
+    <h1 class="entry-title">Lit Tracker</h1>
   </header>
 
     <div class="entry-meta entry-meta-before-content">
       <span class="entry-meta-item posted-on">
-        <a href="https://mkmiecik14.github.io/lit-tracker/2019/03/05/emoji-support/">
-          <time class="entry-date published" datetime="2019-03-05T00:00:00&#43;0000">March 5, 2019</time>
+        <a href="https://mkmiecik14.github.io/lit-tracker/1/01/01/2022-06-20-lit-tracker/">
+          <time class="entry-date published" datetime="0001-01-01T00:00:00&#43;0000">January 1, 0001</time>
         </a>
       </span>
     </div>
 
 	<div class="entry-content">
-    <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
-<p>The <a href="https://gohugo.io/functions/emojify/"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes">Inline Shortcodes</a>.</p>
-<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a href="https://gohugo.io/getting-started/configuration/">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
-<!-- raw HTML omitted -->
-<p>The <a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
-<hr>
-<p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>.emoji {
-</span></span><span style="display:flex;"><span>  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+    
 
-<style>
-.emojify {
-	font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-	font-size: 2rem;
-	vertical-align: middle;
-}
-@media screen and (max-width:650px) {
-  .nowrap {
-    display: block;
-    margin: 25px 0;
-  }
-}
-</style>
+
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --</code></pre>
+<pre><code>## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.2     v dplyr   1.0.6
+## v tidyr   1.1.3     v stringr 1.4.0
+## v readr   1.4.0     v forcats 0.5.1</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.1.1</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(readxl)</code></pre>
+<pre class="r"><code># Loading in data
+lit_data &lt;- read_excel(path = &quot;../../../lit-tracker.xlsx&quot;)</code></pre>
+<pre class="r"><code># Calculating features
+init_date &lt;- as.Date(lit_data$date[1])
+today &lt;- as.Date(Sys.time())
+main_data &lt;- 
+  tibble(
+    date = seq.Date(from = init_date, to = today, by = &quot;days&quot;),
+    week = lubridate::week(date),
+    day = lubridate::wday(date, label = TRUE)
+    ) %&gt;%
+  left_join(., lit_data, by = &quot;date&quot;) %&gt;%
+  mutate(
+    read = ifelse(is.na(citation), 0, 1),
+    total = cumsum(read)
+  )</code></pre>
+<pre class="r"><code># Plot of cumulative reads
+ggplot(main_data, aes(date, total)) +
+  geom_point() +
+  geom_path() +
+  labs(x = &quot;Date&quot;, y = &quot;Cumulative Reads&quot;) +
+  theme_bw()</code></pre>
+<p><img src="https://mkmiecik14.github.io/lit-tracker/1/01/01/2022-06-20-lit-tracker/index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<pre class="r"><code># next here is a plot of reads per day of the week</code></pre>
+
   </div>
 
   
@@ -91,14 +106,9 @@
       
       <div class="nav-nxt">
         <span>Newer Post </span>
-        <a href="https://mkmiecik14.github.io/lit-tracker/2019/03/08/math-typesetting/" rel="next">Math Typesetting</a>
+        <a href="https://mkmiecik14.github.io/lit-tracker/2019/03/05/emoji-support/" rel="next">Emoji Support</a>
       </div>
       
-      
-      <div class="nav-pre">
-        <span>Older Post </span>
-        <a href="https://mkmiecik14.github.io/lit-tracker/1/01/01/2022-06-20-lit-tracker/" rel="prev">Lit Tracker</a>
-      </div>
       
     </div>
   </nav>

@@ -1,0 +1,52 @@
+---
+title: Lit Tracker
+author: 'Matt Kmiecik'
+date: 'Last updated `r Sys.Date()'
+slug: lit-tracker
+categories: []
+tags: []
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(readxl)
+```
+
+```{r}
+# Loading in data
+lit_data <- read_excel(path = "../../../lit-tracker.xlsx")
+```
+
+```{r}
+# Calculating features
+init_date <- as.Date(lit_data$date[1])
+today <- as.Date(Sys.time())
+main_data <- 
+  tibble(
+    date = seq.Date(from = init_date, to = today, by = "days"),
+    week = lubridate::week(date),
+    day = lubridate::wday(date, label = TRUE)
+    ) %>%
+  left_join(., lit_data, by = "date") %>%
+  mutate(
+    read = ifelse(is.na(citation), 0, 1),
+    total = cumsum(read)
+  )
+```
+
+
+```{r}
+# Plot of cumulative reads
+ggplot(main_data, aes(date, total)) +
+  geom_point() +
+  geom_path() +
+  labs(x = "Date", y = "Cumulative Reads") +
+  theme_bw()
+```
+
+```{r}
+# next here is a plot of reads per day of the week
+```
+
