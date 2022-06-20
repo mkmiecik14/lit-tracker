@@ -2,92 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/</loc>
+    <lastmod>2022-06-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://singular-tartufo-d668c0.netlify.app/2022/06/20/2022-06-20-lit-tracker/</loc>
+    <lastmod>2022-06-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://singular-tartufo-d668c0.netlify.app/post/</loc>
+    <lastmod>2022-06-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://singular-tartufo-d668c0.netlify.app/categories/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/categories/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/2020/12/01/2020-12-01-r-rmarkdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/2020/12/01/2020-12-01-r-rmarkdown/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/plot/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/plot/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/categories/r/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/post/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/r-markdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/categories/r/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/regression/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/r-markdown/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/regression/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/archives/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/css/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/html/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/html/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/markdown/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/2019/03/11/markdown-syntax/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/2019/03/11/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/series/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/series/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/categories/syntax/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/categories/syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/themes/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/categories/themes/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/categories/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/series/themes-guide/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/series/themes-guide/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/privacy/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/privacy/</loc>
     <lastmod>2019-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/2019/03/10/rich-content/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/2019/03/10/rich-content/</loc>
     <lastmod>2019-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/shortcodes/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/shortcodes/</loc>
     <lastmod>2019-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/2019/03/09/placeholder-text/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/2019/03/09/placeholder-text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/text/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/2019/03/08/math-typesetting/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/2019/03/08/math-typesetting/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/emoji/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/emoji/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/2019/03/05/emoji-support/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/2019/03/05/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/about/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/tags/index/</loc>
-  </url><url>
-    <loc>https://mkmiecik14.github.io/lit-tracker/1/01/01/2022-06-20-lit-tracker/</loc>
+    <loc>https://singular-tartufo-d668c0.netlify.app/tags/index/</loc>
   </url>
 </urlset>

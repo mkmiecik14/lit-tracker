@@ -2,8 +2,8 @@
 <html><head>
     <meta charset="utf-8">
     <base href="https://singular-tartufo-d668c0.netlify.app/">
-    <title> Hello R Markdown </title>
-    <link rel="canonical" href="https://singular-tartufo-d668c0.netlify.app/2020/12/01/2020-12-01-r-rmarkdown/">
+    <title> Lit Tracker </title>
+    <link rel="canonical" href="https://singular-tartufo-d668c0.netlify.app/2022/06/20/2022-06-20-lit-tracker/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,13 +46,13 @@
 <div class="site-main content">
 <article>
   <header class="entry-header">
-    <h1 class="entry-title">Hello R Markdown</h1>
+    <h1 class="entry-title">Lit Tracker</h1>
   </header>
 
     <div class="entry-meta entry-meta-before-content">
       <span class="entry-meta-item posted-on">
-        <a href="https://singular-tartufo-d668c0.netlify.app/2020/12/01/2020-12-01-r-rmarkdown/">
-          <time class="entry-date published" datetime="2020-12-02T02:13:14&#43;0000">December 1, 2020</time>
+        <a href="https://singular-tartufo-d668c0.netlify.app/2022/06/20/2022-06-20-lit-tracker/">
+          <time class="entry-date published" datetime="2022-06-20T00:00:00&#43;0000">June 20, 2022</time>
         </a>
       </span>
     </div>
@@ -61,45 +61,41 @@
     
 
 
-<div id="r-markdown" class="section level1">
-<h1>R Markdown</h1>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932</code></pre>
-</div>
-<div id="including-plots" class="section level1">
-<h1>Including Plots</h1>
-<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
-<pre class="r"><code>par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&#39;Sky&#39;, &#39;Sunny side of pyramid&#39;, &#39;Shady side of pyramid&#39;),
-  col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
-  init.angle = -50, border = NA
-)</code></pre>
-<div class="figure"><span style="display:block;" id="fig:pie"></span>
-<img src="https://singular-tartufo-d668c0.netlify.app/2020/12/01/2020-12-01-r-rmarkdown/index.en_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
-<p class="caption">
-Figure 1: A fancy pie chart.
-</p>
-</div>
-</div>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --</code></pre>
+<pre><code>## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.2     v dplyr   1.0.6
+## v tidyr   1.1.3     v stringr 1.4.0
+## v readr   1.4.0     v forcats 0.5.1</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.1.1</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(readxl)</code></pre>
+<pre class="r"><code># Loading in data
+lit_data &lt;- read_excel(path = &quot;../../../lit-tracker.xlsx&quot;)</code></pre>
+<pre class="r"><code># Calculating features
+init_date &lt;- as.Date(lit_data$date[1])
+today &lt;- as.Date(Sys.time())
+main_data &lt;- 
+  tibble(
+    date = seq.Date(from = init_date, to = today, by = &quot;days&quot;),
+    week = lubridate::week(date),
+    day = lubridate::wday(date, label = TRUE)
+    ) %&gt;%
+  left_join(., lit_data, by = &quot;date&quot;) %&gt;%
+  mutate(
+    read = ifelse(is.na(citation), 0, 1),
+    total = cumsum(read)
+  )</code></pre>
+<pre class="r"><code># Plot of cumulative reads
+ggplot(main_data, aes(date, total)) +
+  geom_point() +
+  geom_path() +
+  labs(x = &quot;Date&quot;, y = &quot;Cumulative Reads&quot;) +
+  theme_bw()</code></pre>
+<p><img src="https://singular-tartufo-d668c0.netlify.app/2022/06/20/2022-06-20-lit-tracker/index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<pre class="r"><code># next here is a plot of reads per day of the week</code></pre>
 
   </div>
 
@@ -108,15 +104,10 @@ Figure 1: A fancy pie chart.
     <h2 class="screen-reader-text">Posts navigation</h2>
     <div class="nav-links">
       
-      <div class="nav-nxt">
-        <span>Newer Post </span>
-        <a href="https://singular-tartufo-d668c0.netlify.app/2022/06/20/2022-06-20-lit-tracker/" rel="next">Lit Tracker</a>
-      </div>
-      
       
       <div class="nav-pre">
         <span>Older Post </span>
-        <a href="https://singular-tartufo-d668c0.netlify.app/2019/03/11/markdown-syntax/" rel="prev">Markdown Syntax Guide</a>
+        <a href="https://singular-tartufo-d668c0.netlify.app/2020/12/01/2020-12-01-r-rmarkdown/" rel="prev">Hello R Markdown</a>
       </div>
       
     </div>
