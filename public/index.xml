@@ -7,14 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright License [GNU General Public License v2 or later](http://www.gnu.org/licenses/gpl-2.0.html)</copyright>
-    <lastBuildDate>Mon, 20 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://singular-tartufo-d668c0.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://singular-tartufo-d668c0.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lit Tracker</title>
-      <link>https://singular-tartufo-d668c0.netlify.app/2022/06/20/2022-06-20-lit-tracker/</link>
-      <pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate>
+      <link>https://singular-tartufo-d668c0.netlify.app/2022/06/30/2022-06-20-lit-tracker/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://singular-tartufo-d668c0.netlify.app/2022/06/20/2022-06-20-lit-tracker/</guid>
-      <description>library(tidyverse)## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --## v ggplot2 3.3.5 v purrr 0.3.4## v tibble 3.1.2 v dplyr 1.0.6## v tidyr 1.1.3 v stringr 1.4.0## v readr 1.4.0 v forcats 0.5.1## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 4.1.1## -- Conflicts ------------------------------------------ tidyverse_conflicts() --## x dplyr::filter() masks stats::filter()## x dplyr::lag() masks stats::lag()library(readxl)# Loading in datalit_data &amp;lt;- read_excel(path = &amp;quot;.</description>
+      <guid>https://singular-tartufo-d668c0.netlify.app/2022/06/30/2022-06-20-lit-tracker/</guid>
+      <description>This post serves as my daily literature tracker. My goal is to sit and read at least 1 paper per day Monday-Friday.
+Here are the packages used for this post:
+library(tidyverse)## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --## v ggplot2 3.3.5 v purrr 0.3.4## v tibble 3.1.2 v dplyr 1.0.6## v tidyr 1.1.3 v stringr 1.4.0## v readr 1.4.0 v forcats 0.5.1## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 4.</description>
     </item>
     
     <item>
