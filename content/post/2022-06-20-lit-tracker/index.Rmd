@@ -16,11 +16,21 @@ Here are the packages used for this post:
 ```{r}
 library(tidyverse)
 library(readxl)
+library(httr)
 ```
 
 ```{r}
-# Loading in data
-lit_data <- read_excel(path = "../../../lit-tracker.xlsx")
+# inspired by: https://community.rstudio.com/t/read-xlsx-from-github/9386/3
+github_link <- 
+  "https://github.com/mkmiecik14/lit-tracker/blob/main/lit-tracker.xlsx?raw=true"
+
+temp_file <- tempfile(fileext = ".xlsx")
+req <- 
+  GET(
+    github_link, 
+    write_disk(path = temp_file)# write result to disk
+    )
+lit_data <- readxl::read_excel(temp_file)
 ```
 
 ```{r}
